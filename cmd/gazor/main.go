@@ -1,6 +1,7 @@
 // Command gazor is a Go reimplementation of the razor (Razor2) client
-// (check / report / revoke). The core lives in package razor, imported
-// in-process by the rspamd shim; this command is the standalone CLI front-end.
+// (check / report / revoke). The core lives in package razor, which the gozer
+// backend links in-process behind one HTTP endpoint for rspamd; this command is
+// the standalone CLI front-end.
 //
 // CLI usage (message on stdin, never touches disk):
 //

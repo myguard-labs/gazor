@@ -1,5 +1,9 @@
 # gazor
 
+[![CI](https://github.com/eilandert/gazor/actions/workflows/ci.yml/badge.svg)](https://github.com/eilandert/gazor/actions/workflows/ci.yml)
+[![Release](https://github.com/eilandert/gazor/actions/workflows/release.yml/badge.svg)](https://github.com/eilandert/gazor/actions/workflows/release.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/eilandert/gazor.svg)](https://pkg.go.dev/github.com/eilandert/gazor)
+
 > A fast, zero-dependency **Go [Razor 2](https://razor.sourceforge.net/) client**
 > — `check` / `report` / `revoke` — for streaming pipelines, with zero on-disk
 > message handling. Standard library only.
