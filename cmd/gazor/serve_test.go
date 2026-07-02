@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/eilandert/gazor/razor"
+	"github.com/myguard-labs/gazor/razor"
 )
 
 // deadClient returns a Client pointed at a closed loopback port so every

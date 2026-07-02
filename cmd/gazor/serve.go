@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/eilandert/gazor/razor"
+	"github.com/myguard-labs/gazor/razor"
 )
 
 // serveConfig is resolved from flags/env (flag > env > identity file > default).

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/eilandert/gazor/razor"
+	"github.com/myguard-labs/gazor/razor"
 )
 
 // TestCLIRegisterEnvAndSave drives `gazor register` against the fake razor

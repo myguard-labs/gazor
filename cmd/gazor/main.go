@@ -33,12 +33,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/eilandert/gazor/razor"
+	"github.com/myguard-labs/gazor/razor"
 )
 
 var version = "dev"
 
-const repoURL = "https://github.com/eilandert/gazor"
+const repoURL = "https://github.com/myguard-labs/gazor"
 
 // maxStdin bounds the message read from stdin so the CLI cannot be made to
 // buffer unbounded input (razor messages are small; prep_part caps parts).

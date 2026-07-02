@@ -1,8 +1,8 @@
 # gazor
 
-[![CI](https://github.com/eilandert/gazor/actions/workflows/ci.yml/badge.svg)](https://github.com/eilandert/gazor/actions/workflows/ci.yml)
-[![Release](https://github.com/eilandert/gazor/actions/workflows/release.yml/badge.svg)](https://github.com/eilandert/gazor/actions/workflows/release.yml)
-[![Go Reference](https://pkg.go.dev/badge/github.com/eilandert/gazor.svg)](https://pkg.go.dev/github.com/eilandert/gazor)
+[![CI](https://github.com/myguard-labs/gazor/actions/workflows/ci.yml/badge.svg)](https://github.com/myguard-labs/gazor/actions/workflows/ci.yml)
+[![Release](https://github.com/myguard-labs/gazor/actions/workflows/release.yml/badge.svg)](https://github.com/myguard-labs/gazor/actions/workflows/release.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/myguard-labs/gazor.svg)](https://pkg.go.dev/github.com/myguard-labs/gazor)
 
 > A fast, zero-dependency **Go [Razor 2](https://razor.sourceforge.net/) client**
 > — `check` / `report` / `revoke` — for streaming pipelines, with zero on-disk
@@ -16,9 +16,9 @@ that has to be exact; they are verified against real razor in CI.
 
 Use it two ways:
 
-- **As a Go library** — `import "github.com/eilandert/gazor/razor"` and call
+- **As a Go library** — `import "github.com/myguard-labs/gazor/razor"` and call
   `Client.Check/Report/Revoke` in-process. This is how the
-  [gozer](https://github.com/eilandert/gozer) backend uses it: linked directly,
+  [gozer](https://github.com/myguard-labs/gozer) backend uses it: linked directly,
   no subprocess, no socket.
 - **As a CLI** — `gazor check|report|revoke` (message on stdin, never touches
   disk), plus a `gazor serve` HTTP sidecar.
@@ -27,7 +27,7 @@ Use it two ways:
 
 ```go
 // library
-import "github.com/eilandert/gazor/razor"
+import "github.com/myguard-labs/gazor/razor"
 
 c := &razor.Client{}                 // discovers Cloudmark servers automatically
 spam, err := c.Check(msg)            // bool: is this known spam?
@@ -51,10 +51,10 @@ each wire-compatible with the original perl/python/C tool:
 
 | Repo | Role |
 |------|------|
-| [gdcc](https://github.com/eilandert/gdcc) | DCC client — library + CLI |
-| [gazor](https://github.com/eilandert/gazor) | Razor 2 client — library + CLI |
-| [gyzor](https://github.com/eilandert/gyzor) | Pyzor client — library + CLI |
-| [gozer](https://github.com/eilandert/gozer) | backend binary — links all three in-process behind one HTTP endpoint |
+| [gdcc](https://github.com/myguard-labs/gdcc) | DCC client — library + CLI |
+| [gazor](https://github.com/myguard-labs/gazor) | Razor 2 client — library + CLI |
+| [gyzor](https://github.com/myguard-labs/gyzor) | Pyzor client — library + CLI |
+| [gozer](https://github.com/myguard-labs/gozer) | backend binary — links all three in-process behind one HTTP endpoint |
 | [rspamd-dcc-razor-pyzor](https://github.com/eilandert/rspamd-dcc-razor-pyzor) | Docker deployment — gozer image + rspamd plugin + dovecot sieve |
 
 The three clients share the same `Client` shape, CLI/env conventions and `serve`
