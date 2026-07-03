@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, builder02, lxc]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
@@ -31,7 +31,7 @@ jobs:
         run: go test -run=x -fuzz=FuzzSignatures -fuzztime=30s ./razor/
 
   lint:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, builder02, lxc]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
@@ -53,7 +53,7 @@ jobs:
           govulncheck ./...
 
   codeql:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, builder02, lxc]
     permissions:
       security-events: write
     steps:
