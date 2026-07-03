@@ -11,7 +11,7 @@ jobs:
   # unverified commit cannot publish binaries (the ci workflow runs only on
   # branch pushes / PRs, not on tags).
   verify:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, builder02, lxc]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
@@ -35,7 +35,7 @@ jobs:
 
   goreleaser:
     needs: verify
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, builder02, lxc]
     permissions:
       contents: write
     steps:
